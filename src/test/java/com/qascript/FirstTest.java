@@ -15,6 +15,7 @@ public class FirstTest {
 	 WebDriver driver;    
         ChromeOptions options = new ChromeOptions();
 	options.addArguments("--no-sandbox");
+	options.addArguments("window-size=1400,800");    
         options.addArguments("headless");
         options.addArguments("disable-gpu");
         driver = new ChromeDriver(options);
