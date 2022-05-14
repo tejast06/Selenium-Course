@@ -15,6 +15,7 @@ public class FirstTest {
 	 WebDriver driver; 
 		 System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
 		 ChromeOptions options = new ChromeOptions();
+	    options.addArguments("headless");
 		 driver = new ChromeDriver(options);
 		 driver.get("https://www.impactguru.com");
          System.out.println("Title of the page is: " + driver.getTitle());
