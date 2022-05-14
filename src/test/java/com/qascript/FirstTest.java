@@ -13,14 +13,19 @@ public class FirstTest {
     public void OpenBrowser()  {
      
 	WebDriver driver;
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+       
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.addArguments("disable-gpu");
+	     chromeOptions.setHeadless(true);
+       // options.addArguments("headless");
+      //  options.addArguments("disable-gpu");
+	     System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com");
         System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru"));    
+        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru")); 
+	    
+	    
+	    
 	    
     }
 
