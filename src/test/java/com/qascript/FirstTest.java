@@ -12,14 +12,16 @@ public class FirstTest {
     @Test
     public void OpenBrowser()  {
      
-	 WebDriver driver; 
-		 System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
-		 ChromeOptions options = new ChromeOptions();
-	    options.addArguments("headless");
-		 driver = new ChromeDriver(options);
-		 driver.get("https://www.impactguru.com");
-         System.out.println("Title of the page is: " + driver.getTitle());
-         Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru"));
+	WebDriver driver;
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        options.addArguments("disable-gpu");
+        driver = new ChromeDriver(options);
+        driver.get("https://www.impactguru.com");
+        System.out.println("Title of the page is: " + driver.getTitle());
+        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru"));    
+	    
     }
 
 
