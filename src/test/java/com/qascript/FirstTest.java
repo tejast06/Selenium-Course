@@ -15,7 +15,7 @@ public class FirstTest {
 	WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("headless");
         options.addArguments("disable-gpu");
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com");
