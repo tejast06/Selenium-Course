@@ -13,6 +13,7 @@ public class FirstTest {
     public void OpenBrowser()  {
      
 	WebDriver driver;    
+	System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");   
         ChromeOptions options = new ChromeOptions();
 	options.addArguments("--no-sandbox");
 	options.addArguments("window-size=1400,800");    
