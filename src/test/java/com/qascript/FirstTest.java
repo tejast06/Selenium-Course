@@ -31,7 +31,8 @@ options.addArguments("--dns-prefetch-disable");
 options.addArguments("--no-proxy-server"); 
 options.addArguments("--log-level=3"); 
 options.addArguments("--silent"); 
-options.addArguments("--disable-browser-side-navigation"); options.setPageLoadStrategy(PageLoadStrategy.NORMAL); 
+options.addArguments("--disable-browser-side-navigation"); 
+	    //options.setPageLoadStrategy(PageLoadStrategy.NORMAL); 
 options.setProxy(null);
 	    
         driver = new ChromeDriver(options);
