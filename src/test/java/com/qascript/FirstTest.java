@@ -12,7 +12,9 @@ public class FirstTest {
     @Test
     public void OpenBrowser()  {
      
-	WebDriver driver;       
+	 System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+	 WebDriver driver;  
+	    
         ChromeOptions options = new ChromeOptions();
 	options.addArguments("--no-sandbox");
 	options.addArguments("window-size=1400,800");    
