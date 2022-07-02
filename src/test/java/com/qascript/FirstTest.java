@@ -14,7 +14,7 @@ public class FirstTest {
      
 	 WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");			
-	//options.addArguments("headless");
+	options.addArguments("headless");
         options.addArguments("browser");		
 	options.addArguments("start-maximized"); 
         options.addArguments("enable-automation"); 
@@ -25,7 +25,7 @@ public class FirstTest {
         options.addArguments("--disable-gpu"); 
         options.addArguments("--disable-features=VizDisplayCompositor"); 
 	ChromeOptions options = new ChromeOptions();
-        options.setPageLoadStrategy(PageLoadStrategy.NONE);
+       // options.setPageLoadStrategy(PageLoadStrategy.NONE);
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com");
 	System.out.println("Title of the page is: " + driver.getTitle());
