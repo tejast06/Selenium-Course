@@ -11,13 +11,23 @@ public class FirstTest {
 
 
     @Test
-       ChromeOptions options = new ChromeOptions();
-       DesiredCapabilities capabilities = new DesiredCapabilities();
-       capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-       System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-       ChromeDriver driver = new ChromeDriver(capabilities);
-       DriverFactory.changeWebDriver(driver)WebUI.navigateToUrl('http://www.google.com');
-	    
+      WebDriver driver;
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");			
+		options.addArguments("headless");
+        options.addArguments("browser");		
+		options.addArguments("start-maximized"); 
+        options.addArguments("enable-automation"); 
+        options.addArguments("--no-sandbox"); 
+        options.addArguments("--disable-infobars"); 
+        options.addArguments("--disable-dev-shm-usage"); 
+        options.addArguments("--disable-browser-side-navigation"); 
+        options.addArguments("--disable-gpu"); 
+        options.addArguments("--disable-features=VizDisplayCompositor"); 
+		ChromeOptions options = new ChromeOptions();
+       // options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        driver = new ChromeDriver(options);
+        driver.get("https://www.impactguru.com");
+		System.out.println(driver.getTitle());   
 	    
     }
 
